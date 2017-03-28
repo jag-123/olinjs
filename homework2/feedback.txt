@@ -1,5 +1,5 @@
 
-Homework Feedback for Cat App
+**Homework Feedback for Cat App**
 
 
 Functionality:
@@ -22,4 +22,4 @@ Readability: (10/10)
 
 
 Summary:
-It was very sad when the cats were murdered, but great job on this homework! Everything is functional and well written. You seem to have had a great understanding of how everything fit together.  (50/50).
+It was very sad when the cats were murdered, but great job on this homework! Everything is functional and well written. You seem to have had a great understanding of how everything fits together.  (50/50).
