@@ -1,0 +1,25 @@
+
+Homework Feedback for Cat App
+
+
+Functionality:
+
+All tasks completed! Awesome job, and your app appears to be bug free. 
+
+Completion: (20/20)
+
+Bug Free: (10/10)
+
+
+Quality:
+
+Your code was well organized and commented! It was very clear and readable.  
+You followed good coding practices throughout! 
+
+Good Coding Practices: (10/10)
+
+Readability: (10/10)
+
+
+Summary:
+It was very sad when the cats were murdered, but great job on this homework! Everything is functional and well written. You seem to have had a great understanding of how everything fit together.  (50/50).
