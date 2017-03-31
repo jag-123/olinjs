@@ -1,4 +1,4 @@
-// getting-started.js
+// getting-started.js  <- Is this leftover from a boiler plate?
 var mongoose = require('mongoose');
 var Toy = require('../models/toyModel.js');
 mongoose.connect('mongodb://localhost/cats');
