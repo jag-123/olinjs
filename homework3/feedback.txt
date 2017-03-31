@@ -1,0 +1,26 @@
+Homework Feedback for Cat App with Mongoose:
+
+Functionality:
+
+All of the required features work!
+The createToy function does not work because toys is a property of each cat within allCats,
+not a property of allCats.  If you want to try out embedding again, you will probably know how to do this now! Nice job trying out an additional/challenging feature. Your advanced query was functional.
+
+The only bugs were in the additional challenges portion of the assignment, so you will not lose any points for those.
+
+Completion:  (20/20)
+Bug Free: (10/10)
+
+Quality:
+
+You followed good coding practices throughout! Your code was very readable. 
+It looks like you forgot to put a comment explaining what the gteCat function does, and spacing could be a little more consistent. 
+
+Good Coding Practices: (10/10)
+Readability: (9/10)
+
+
+Summary:
+Nice work! Your advanced query worked and it was awesome to start trying out something more challenging. You had a great handle on how to integrate the mongo database!
+
+(49/50)

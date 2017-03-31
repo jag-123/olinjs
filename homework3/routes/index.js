@@ -31,6 +31,11 @@ function randColors(array){
 var createToy = function (req,res){
   Cat.find({}, function(err,allCats){
     var myToy = new Toy({name:rand(catToys)});
+
+    // The reason that this does not work is that toys is a property of each cat in allCats 
+    // not a property of allCats. If you print allCats you can see that it's a list of cats.
+    // Because of this allCats.toys does not exist and going to the /newtoy route makes the app crash.
+    // Awesome to work towards implementing this additional feature though.
     allCats.toys.push(myToy);
     allCats.save();
     console.log(allCats)
@@ -97,6 +102,9 @@ var deleteCat = function (req,res){
   });
 }
 
+
+// Would be nice to add a comment here explaining what this function is for!
+// It is functional though! Nice use of an advanced query here.
 var gteCat = function (req,res){
   Cat.find({age: {$gte: 7}}, function(err, allCats){
     res.render("cats",{"classes": allCats})
