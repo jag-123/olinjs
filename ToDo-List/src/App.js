@@ -5,13 +5,18 @@ var ReactDOM = require('react-dom');
 var TodoBox = React.createClass({
 	getInitialState: function () {
 		return {
+			// I'd name this something more descriptive like 'tasks'
 			data: []
 		};
 	},
 	generateId: function () {
+		// Interesting way to generate ids... In a real app you'd use
+		// something a bit more robust like mongo ids.
 		return Math.floor(Math.random()*90000) + 10000;
 	},
   editItem: function(editedItem){
+  	// You got the basics for editing an item here! Just have to implement
+  	// onItemEdit in your TodoList component.
     var allItems = this.state.data.map(function(item){
       if (item.id !== editedItem.id){
         return item;
@@ -20,6 +25,7 @@ var TodoBox = React.createClass({
     })
   },
   updateItems:function(items){
+  	// This is never used, and also uses 'items' instead of data?
     this.setState({items:items})
   },
 	handleNodeRemoval: function (nodeId) {
@@ -27,12 +33,15 @@ var TodoBox = React.createClass({
 		data = data.filter(function (el) {
 			return el.id !== nodeId;
 		});
+		console.log(data);
 		this.setState({data});
+		// No need for these empty return statements at the end of a function
 		return;
 	},
 	handleSubmit: function (task) {
 		var data = this.state.data;
 		var id = this.generateId().toString();
+		// This should probably be a boolean instead of a string
 		var complete = 'false';
 		data = data.concat([{id, task, complete}]);
 		this.setState({data});
@@ -95,13 +104,16 @@ var TodoItem = React.createClass({
 	},
   handleEdit: function(e){
     e.preventDefault();
+    // This is called onItemEdit when you pass it in your props, that's why this
+    // doesn't do anything.
     this.props.handleEdit(this.props.nodeID);
     return;
   },
 	render: function() {
 		var classes = '';
 		if (this.props.complete === 'true') {
-			classes = classes + 'completed';
+			// I like the idea here, but this is overkill if classes is always empty before.
+			classes = 'completed';
 		}
 		return (
 			<li className={classes}>
@@ -109,7 +121,8 @@ var TodoItem = React.createClass({
 				    {this.props.task}
         </label>
 				<div>
-					<button type="button" onClick={this.toggleComplete}>&#x2713;</button> <button type="button" onClick={this.removeNode}>&#xff38;</button>
+					<button type="button" onClick={this.toggleComplete}>&#x2713;</button>
+					<button type="button" onClick={this.removeNode}>&#xff38;</button>
 				</div>
 			</li>
 		);
