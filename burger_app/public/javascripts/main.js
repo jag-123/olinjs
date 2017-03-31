@@ -1,3 +1,7 @@
+// comments?!
+
+// probably want a more descriptive name than $form since there
+// are a bunch of forms
 var $form = $("#ajax-form");
 
 $form.submit(function(event) {
@@ -8,14 +12,19 @@ $form.submit(function(event) {
     name: myName,
     price: myPrice
   }).done(function(data){
+    // convention to call this $div since it is a jquery element
     var div =$('div').first().clone();
     div.attr('id', data._id);
+    // good to remove logs when they are no longer needed
     console.log(div.children())
+    // I might have grabbed these value by class indexing into children is
+    // a brittle method to do this
     div.children()[0].value = data.name;
     div.children()[1].value = data.price.toString();
     div.children()[3].value = data._id;
     div.children()[4].value = data._id;
     $('#ingredientList').append(div);
+    // make sure you rebind any event handlers that your new div needs
   });
 });
 
@@ -63,6 +72,7 @@ $("#addOrder").submit(function(event){
   event.preventDefault();
   var checked = $('.checkbox');
   var ingrs = '';
+  // this would be a great spot for checked.forEach or checked.map
   for (i=0;i<checked.length;i++){
     if (checked[i].checked){
       ingrs += checked[i].name + ' ';

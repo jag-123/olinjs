@@ -1,6 +1,8 @@
 var Ingredients = require('../models/ingredientModel.js');
 var Orders = require('../models/orderModel.js');
 var routes = {};
+
+// there are some real strange errors from storing one total on your server which gets accessed by every client. I would sugest sending up the amount the total should change to the client and letting each client deal with keeping track of the total
 var total = 0;
 
 routes.orders = function (req,res){
