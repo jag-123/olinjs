@@ -1,8 +1,8 @@
 Homework Feedback:
 
 Functionality:
-- Completion: You are missing a lot of your dependencies in your package.json file. You should "npm install --save <package>" Most of the features work, except your local login page. You styled your login page and it looks super nice, and I like that you cleaned up your twotes page to be split up into divs.  (17/20)
-- Bug Free: Remove your log statements when you are in production. You didn't have local login working, but everything else is good. (10/10)
+- Completion: I had to update all of the testing-related packages to make sure they work. Most of the features work, except your local login page. You styled your login page and it looks super nice, and I like that you cleaned up your twotes page to be split up into divs. In terms of tests, they are nicely written, but most of your tests fail for some reason. Check that out when you get the chance (15/20)
+- Bug Free: Remove your log statements when you are in production. You didn't have local login working, and when you remove a twote and then hit logout, your app crashes. (8/10)
 
 Quality:
 - Good Coding Practices: Nice folder structure. The different functions that you use is good. (10/10)
